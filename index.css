@@ -25,7 +25,13 @@ body {
       justify-content: center;
   }
 
+  textarea {
+    font-family: inherit;
+    font-size: inherit;
+  }
+
   #resultsBox {
       font-size: 30px;
       white-space: pre-line;
+      margin-top: 0px;
   }
