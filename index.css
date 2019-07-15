@@ -2,6 +2,8 @@ body {
     font-family: Roboto;
     text-align: center;
     padding: 30px 30px 10px 30px;
+    background-color: #6b6570;
+    color: #ace894;
   }
   
   div {
@@ -28,6 +30,8 @@ body {
   textarea {
     font-family: inherit;
     font-size: inherit;
+    color: #4a314d;
+    background-color: #a8ba9a;
   }
 
   #resultsBox {
