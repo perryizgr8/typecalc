@@ -21,8 +21,11 @@ body {
   
   #entryBox {
       font-size: 30px;
+      display: flex;
+      justify-content: center;
   }
 
   #resultsBox {
       font-size: 30px;
+      white-space: pre-line;
   }
