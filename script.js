@@ -6,7 +6,7 @@ function parseInput(inputText) {
     resultsBox.textContent = '';
     for (index in inputLines) {
         const parser = new nearley.Parser(nearley.Grammar.fromCompiled(grammar));
-        parser.feed(inputLines[index]);
+        parser.feed(inputLines[index].split(' ').join(''));
         resultsBox.textContent += parser.results;
         resultsBox.textContent += '\r\n';
     }
