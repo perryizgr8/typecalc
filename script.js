@@ -1,6 +1,6 @@
 function parseInput(inputText) {
     console.log("i am parsing: " + inputText);
-    
+
     inputText = inputText.trim();
     var inputLines = inputText.split('\n');
 

@@ -1,5 +1,5 @@
 body {
-    font-family: Roboto;
+    font-family: monospace;
     text-align: center;
     padding: 30px 30px 10px 30px;
     background-color: #6b6570;
@@ -32,10 +32,22 @@ body {
     font-size: inherit;
     color: #4a314d;
     background-color: #a8ba9a;
+    height: 500px;
+    width: 500px;
+    line-height: 1.7em;
+    resize: none;
+    scrollbar-width: thin;
   }
 
   #resultsBox {
       font-size: 20px;
       white-space: pre-line;
       margin-top: 0px;
+      color: #4a314d;
+      background-color: #b3b8b0;
+      height: 500px;
+      width: 500px;
+      text-align: left;
+      line-height: 1.7em;
+      scrollbar-width: thin;
   }
