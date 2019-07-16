@@ -19,6 +19,8 @@ body {
     font-size: 20px;
     line-height: 25px;
     margin-top: 40px;
+    margin-left: 25%;
+    margin-right: 25%;
   }
   
   #entryBox {
@@ -36,7 +38,7 @@ body {
     width: 500px;
     line-height: 1.7em;
     resize: none;
-    scrollbar-width: thin;
+    scrollbar-width: none;
   }
 
   #resultsBox {
@@ -45,9 +47,9 @@ body {
       margin-top: 0px;
       color: #4a314d;
       background-color: #b3b8b0;
-      height: 500px;
+      height: 505px;
       width: 500px;
       text-align: left;
       line-height: 1.7em;
-      scrollbar-width: thin;
+      scrollbar-width: none;
   }
