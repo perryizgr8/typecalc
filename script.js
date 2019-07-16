@@ -9,8 +9,13 @@ function parseInput(inputText) {
     for (index in inputLines) {
         const parser = new nearley.Parser(nearley.Grammar.fromCompiled(grammar));
         var line = inputLines[index].split('#')[0];
-        parser.feed(line.split(' ').join(''));
-        resultsBox.textContent += parser.results;
+        try {
+            parser.feed(line.split(' ').join(''));
+            resultsBox.textContent += parser.results;
+        } catch(e) {
+            console.log("Line not parsed: " + e.message);
+            resultsBox.textContent += inputLines[index];
+        }
         resultsBox.textContent += '\r\n';
     }
 
