@@ -18,7 +18,9 @@
         <div id="resultsBox" style="overflow-y: scroll"></div>
     </div>
     <footer>
-        You can type numbers separated by / or * or + or -. You can use () for grouping.
+        You can type numbers separated by "/" or "*" or "+" or "-".
+        You can use "()" for grouping.
+        You can use phrases of the form "300 + 30%".
         Each line is evaluated independently. Everything after # in a line is ignored.
     </footer>
     <script src="nearley.js"></script>
@@ -47,6 +49,7 @@
         }
         window.onload = function () {
             document.getElementById("entryText").value = "";
+            document.getElementById("resultsBox").textContent = '';
         }
     </script>
 </body>
