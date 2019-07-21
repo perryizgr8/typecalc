@@ -16,6 +16,8 @@ var grammar = {
     {"name": "AS", "symbols": ["MD"], "postprocess": d => d[0]},
     {"name": "PCT", "symbols": ["AS", {"literal":"+"}, "AS", {"literal":"%"}], "postprocess": d => d[0] + d[0]*(d[2]/100)},
     {"name": "PCT", "symbols": ["AS", {"literal":"-"}, "AS", {"literal":"%"}], "postprocess": d => d[0] - d[0]*(d[2]/100)},
+    {"name": "PCT$string$1", "symbols": [{"literal":"%"}, {"literal":"o"}, {"literal":"f"}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "PCT", "symbols": ["AS", "PCT$string$1", "AS"], "postprocess": d=> (d[0]/100)*d[2]},
     {"name": "PCT", "symbols": ["N"], "postprocess": d => d[0]},
     {"name": "N$ebnf$1", "symbols": [/[0-9]/]},
     {"name": "N$ebnf$1", "symbols": ["N$ebnf$1", /[0-9]/], "postprocess": function arrpush(d) {return d[0].concat([d[1]]);}},
