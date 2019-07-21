@@ -1,2 +1,2 @@
 # typecalc
-Calculator, but with natural typing.
+Calculator, notepad style.
