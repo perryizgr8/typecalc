@@ -12,7 +12,8 @@
         TypeCalc
     </header>
     <div id="entryBox">
-        <textarea id="entryText" spellcheck="false" placeholder="Type here!" type="text" name="entryText" oninput="parseInput(this.value)">
+        <textarea id="entryText" spellcheck="false" placeholder="Type here!" type="text" name="entryText"
+            oninput="parseInput(this.value)">
                 </textarea>
 
         <div id="resultsBox" style="overflow-y: scroll"></div>
@@ -22,6 +23,7 @@
         You can use "()" for grouping.
         You can use phrases of the form "300 + 30%".
         Each line is evaluated independently. Everything after # in a line is ignored.
+        All changes saved automatically.
     </footer>
     <script src="nearley.js"></script>
     <script src="grammar.js"></script>
@@ -50,6 +52,10 @@
         window.onload = function () {
             document.getElementById("entryText").value = "";
             document.getElementById("resultsBox").textContent = '';
+            if (localStorage.getItem('input_text')) {
+                document.getElementById("entryText").value = localStorage.getItem('input_text');
+                parseInput(document.getElementById("entryText").value);
+            }
         }
     </script>
 </body>

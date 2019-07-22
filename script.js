@@ -1,6 +1,8 @@
 function parseInput(inputText) {
     console.log("i am parsing: " + inputText);
 
+    localStorage.setItem('input_text', inputText);
+
     inputText = inputText.trim();
     var inputLines = inputText.split('\n');
 
