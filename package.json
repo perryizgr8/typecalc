@@ -1,0 +1,11 @@
+{
+    "name": "type-calc",
+    "version": "0.0.1",
+    "description": "Loads TypeCalc",
+    "scripts": {
+      "start": "harp server --port $PORT"
+    },
+    "dependencies": {
+      "harp": "*"
+    }
+  }
